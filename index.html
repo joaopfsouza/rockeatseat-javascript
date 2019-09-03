@@ -1,79 +1,98 @@
 <html>
-    <head>
-        <title>Curso Javascript</title>
-    </head>
-    <body>
-        <script>
-        
-            function SwitchSexo(sexo){
-                switch(sexo){
-                    case 'M':
-                    case 'm':
-                        return 'Maculinx';
-                    case 'F':
-                    case 'f':
-                        return 'Femininx';
-                    default:
-                        return 'N/A'
-                }
+
+<head>
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <script>
+        function AlistamentoObrigatorio(sexo, idade) {
+            // AND,OR, NOT
+            var masculino;
+
+            if (sexo.toUpperCase() === 'M' && (idade >= 18 || idade<=25))  {
+                masculino = (sexo.toUpperCase() === 'M');
+                return `Alistamento Obrigatorio ${masculino}` ;
+            } else if (sexo.toUpperCase() !== 'F') {
+                masculino = true;
+                return `Fora da idade de alistamento ${masculino}`
+            }else{
+                masculino = false;
+                return "Não é alistamento obrigatório" + ` ${masculino}`
             }
+        }
 
-            console.log(SwitchSexo("S"))
+        console.log(AlistamentoObrigatorio('M',10));
 
-            function RetornaSexo(sexo){
-                //M,F
-                //Masculino, Feminino
-                var normalizacao = sexo.toUpperCase();
-                if(normalizacao == 'M')
-                    return 'Masculino';
-                else if(normalizacao =='F')
-                    return 'Feminino';
-                else
-                    return 'N/A';
+        function SwitchSexo(sexo) {
+            switch (sexo) {
+                case 'M':
+                case 'm':
+                    return 'Maculinx';
+                case 'F':
+                case 'f':
+                    return 'Femininx';
+                default:
+                    return 'N/A'
             }
+        }
 
-            console.log(RetornaSexo("S"));
+        console.log(SwitchSexo("S"))
+
+        function RetornaSexo(sexo) {
+            //M,F
+            //Masculino, Feminino
+            var normalizacao = sexo.toUpperCase();
+            if (normalizacao == 'M')
+                return 'Masculino';
+            else if (normalizacao == 'F')
+                return 'Feminino';
+            else
+                return 'N/A';
+        }
+
+        console.log(RetornaSexo("S"));
 
 
-            function soma(numero1, numero2){
-                return numero1 + numero2;
-            }
-            console.log(soma(1,2));
+        function soma(numero1, numero2) {
 
-        </script>
+            return numero1 + numero2;
+        }
+        console.log(soma(1, 2));
+    </script>
 
-        <script>
-            var x = 10, y = 5;
-            console.log(x,y);
+    <script>
+        var x = 10,
+            y = 5;
+        console.log(x, y);
 
-            var resultado = x  + y;
-            console.log(resultado);
+        var resultado = x + y;
+        console.log(resultado);
 
-            resultado = x % y;
-            console.log(resultado);
+        resultado = x % y;
+        console.log(resultado);
 
-            console.log(x+=3);
-        
-        </script>
-        <script>
-            var nome = "João";
-            var idade = 29;
-            var peso = 149.0;
-            var humano = true;
+        console.log(x += 3);
+    </script>
+    <script>
+        var nome = "João";
+        var idade = 29;
+        var peso = 149.0;
+        var humano = true;
 
-            var alunos = ['João','Diego','Lucas'];
+        var alunos = ['João', 'Diego', 'Lucas'];
 
-            var aluno = {
-                nome: alunos[2],
-                idade: 29,
-                peso: peso,
-                humano: humano
-            };
+        var aluno = {
+            nome: alunos[2],
+            idade: 29,
+            peso: peso,
+            humano: humano
+        };
 
-            console.log(alunos[0]);
-            console.log(aluno.nome)
+        console.log(alunos[0]);
+        console.log(aluno.nome)
+    </script>
 
-        </script>
-        
-    </body>
+</body>
+
 </html>
