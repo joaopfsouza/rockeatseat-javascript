@@ -6,6 +6,17 @@
 
 <body>
     <script>
+        function exibeAlgo(nome){
+            console.log("Hello World " + nome );
+        }
+    var myInter = setInterval(()=>{exibeAlgo('joao')},1000);
+   
+   setTimeout(()=>{clearInterval(myInter)},10000);
+
+    clearInterval();
+    </script>
+
+    <script>
     //for, while
 
     // for(var i = 0; i<= 100; i++){
