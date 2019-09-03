@@ -5,6 +5,36 @@
     <body>
         <script>
         
+            function SwitchSexo(sexo){
+                switch(sexo){
+                    case 'M':
+                    case 'm':
+                        return 'Maculinx';
+                    case 'F':
+                    case 'f':
+                        return 'Femininx';
+                    default:
+                        return 'N/A'
+                }
+            }
+
+            console.log(SwitchSexo("S"))
+
+            function RetornaSexo(sexo){
+                //M,F
+                //Masculino, Feminino
+                var normalizacao = sexo.toUpperCase();
+                if(normalizacao == 'M')
+                    return 'Masculino';
+                else if(normalizacao =='F')
+                    return 'Feminino';
+                else
+                    return 'N/A';
+            }
+
+            console.log(RetornaSexo("S"));
+
+
             function soma(numero1, numero2){
                 return numero1 + numero2;
             }
