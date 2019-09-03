@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Javascript</title>
+</head>
+<body>
+    <div id="app">
+        <button onclick="ShowAlert()">Me pressione</button>
+        <input onkeyup="ShowKey()" name="campo"/>
+        <button class="btn">Adicionar</button>
+        <p id='result'></p>
+    </div>
+    <script>
+        var inputElement = document.querySelector('input[name=campo]')
+        var btnElement = document.querySelector("button[class=btn");
+        btnElement.onclick = () =>{
+            alert(inputElement.value);
+        }
+
+        function ShowAlert(){
+            alert('Botão foi clicado')
+        }
+
+        function ShowKey(){
+            var text = document.getElementsByTagName("input")[0].value;
+            var dest = document.getElementById("result")
+            console.log(text);
+            dest.innerHTML = text;
+        }
+
+
+        function AddText(){
+            var inputElement = document.querySelector("div#app input")
+        }
+    </script>
+</body>
+</html>
