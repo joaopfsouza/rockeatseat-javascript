@@ -14,8 +14,23 @@
         <p id='result'></p>
     </div>
     <script>
+
+        var linkElement = document.createElement('a');
+        linkElement.setAttribute('href','https://www.w3schools.com/js/default.asp')
+        linkElement.setAttribute('title', 'Site W3SCHOOL');
+        var textElement = document.createTextNode("Acessa link de tutorial de javascript");
+        linkElement.appendChild(textElement);
+
+       var containerElement =  document.querySelector('#app')
+       containerElement.appendChild(linkElement);  
+
+
         var inputElement = document.querySelector('input[name=campo]')
         var btnElement = document.querySelector("button[class=btn");
+
+        //containerElement.removeChild(inputElement);
+        
+
         btnElement.onclick = () =>{
             alert(inputElement.value);
         }
@@ -33,7 +48,7 @@
 
 
         function AddText(){
-            var inputElement = document.querySelector("div#app input")
+            var inputElement = document.querySelector("div#app input");
         }
     </script>
 </body>
