@@ -4,8 +4,6 @@ var btnElement = document.querySelector('#create');
 var listElement = document.querySelector('#list');
 var appElement = document.querySelector('#app');
 
-
-
 containerElement.style.display="none";
 
 btnElement.onclick = () => {
