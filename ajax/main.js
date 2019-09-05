@@ -1,6 +1,6 @@
 var apiUrl = 'https://api.github.com/users/joaopfsouza';
 
-function AjaxReques() {
+function AjaxRequest() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://api.github.com/users/joaopfsouza');
     xhr.send(null);
